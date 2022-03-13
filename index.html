@@ -10,15 +10,20 @@
   <div class='columns'>
     <div class='column-filter'>
       <span class='first-column'>
-        <div class='city-info'>
-          <h1 class='big-text city-name'>PHNOM PENH</h1>
-          <p class='norm-text current-date'>4th Mar, 2022</p>
-          <p class='time current-time light-text'>12:02 PM</p>
+        <div class='top-header'>
+          <div class='temperature-switch'>
+            <button class='celsius off on'>°C</button>
+            <button class='fahrenheit off'>°F</button>
+          </div>
+          <div class='city-info'>
+            <h1 class='big-text city-name'>PHNOM PENH</h1>
+            <p class='norm-text current-date'>4th Mar, 2022</p>
+            <p class='time current-time light-text'>12:02 PM</p>
+          </div>
         </div>
         <div class='weather-info'>
           <div class='main-info'>
-              <div class='img-container'>
-              </div>
+              <div class='img-container'></div>
               <p class='big-text cloud-desc'>Broken Clouds</p>
           </div>
           <div class='vert-line'></div>
@@ -67,8 +72,20 @@
           </div>
         </div>
       </span>
-      <span class='second-column'></span>
-      <span class='third-column'></span>
+      <span class='second-column'>
+        <form action="javascript:void(0);">
+          <input type='search' id='search'>
+          <button class='search-icon' type='button'><img src=7a43be01428f00d7fe1b.png></button>
+        </form>
+      </span>
+      <span class='third-column'>
+        <div class='switch-container'>
+          <button class='norm-text switch-button'>Daily</button>
+          <button class='norm-text switch-button'>Hourly</button>
+        </div>
+        <div class='box-container'>
+        </div>
+      </span>
     </div>
   </div>
 </body>
