@@ -4,10 +4,11 @@ async function getCity(name) {
     { mode: 'cors' },
   );
   const data = await response.json();
+  console.log(data);
   return data;
 }
 
-async function getWeather(name) {
+async function getForecast(name) {
   const cityData = await getCity(name);
   const response = await fetch(
     `https://api.openweathermap.org/data/2.5/forecast?lat=${cityData.coord.lat}&lon=${cityData.coord.lon}&appid=eff84045859e77f8259e956d234a4be2`,
@@ -17,4 +18,10 @@ async function getWeather(name) {
   return data;
 }
 
-export default { getCity, getWeather };
+function checkName(name) {
+  let newName = name.toLowerCase().trim();
+  newName = newName.replace(' ', '%20');
+  console.log(newName);
+  return newName;
+}
+export default { getCity, getForecast, checkName };
